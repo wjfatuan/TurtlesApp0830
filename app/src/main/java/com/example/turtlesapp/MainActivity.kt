@@ -36,11 +36,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showCharacter(name: String) {
-        if(name=="raphael")
-            binding?.imgCharacter?.setImageResource(R.drawable.raphael)
-        if(name=="donatello")
-            binding?.imgCharacter?.setImageResource(R.drawable.donatello)
-        if(name=="michelangelo")
-            binding?.imgCharacter?.setImageResource(R.drawable.michelangelo)
+        when (name) {
+            "raphael" -> binding?.imgCharacter?.setImageResource(R.drawable.raphael)
+            "donatello" -> binding?.imgCharacter?.setImageResource(R.drawable.donatello)
+            "michelangelo" -> binding?.imgCharacter?.setImageResource(R.drawable.michelangelo)
+        }
     }
 }
