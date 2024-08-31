@@ -36,10 +36,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showCharacter(name: String) {
-        when (name) {
-            "raphael" -> binding?.imgCharacter?.setImageResource(R.drawable.raphael)
-            "donatello" -> binding?.imgCharacter?.setImageResource(R.drawable.donatello)
-            "michelangelo" -> binding?.imgCharacter?.setImageResource(R.drawable.michelangelo)
+        var id = when (name) {
+            "raphael" -> R.drawable.raphael
+            "donatello" -> R.drawable.donatello
+            "michelangelo" -> R.drawable.michelangelo
+            else -> 0
         }
+        binding?.imgCharacter?.setImageResource(id)
     }
 }
