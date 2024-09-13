@@ -1,6 +1,7 @@
 package com.example.turtlesapp
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,8 @@ class TurtleDetailActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val turtleName = intent.getStringExtra("TURTLE_NAME")
+        val tv = findViewById<TextView>(R.id.title)
+        tv.text = turtleName
     }
 }

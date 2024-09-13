@@ -1,5 +1,6 @@
 package com.example.turtlesapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
             Log.d("LISTVIEW", "id: $id")
             val tv = view as TextView
             showCharacter(tv.text.toString().lowercase())
+
+            val it = Intent(this, TurtleDetailActivity::class.java)
+            it.putExtra("TURTLE_NAME",tv.text.toString())
+            startActivity(it)
         }
     }
 
