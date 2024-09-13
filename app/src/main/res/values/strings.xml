@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">TurtlesApp</string>
+    <string name="app_name">Ninja Turtles</string>
+    <string name="other">Value</string>
+    <string-array name="turtle_names">
+        <item>Donatello</item>
+        <item>Michelangelo</item>
+        <item>Raphael</item>
+        <item>Leonardo</item>
+        <item>Splinter</item>
+    </string-array>
+
 </resources>

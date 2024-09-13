@@ -1,6 +1,8 @@
 package com.example.turtlesapp
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,16 +24,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding?.btnRaphael?.setOnClickListener {
-            showCharacter("raphael")
-        }
-
-        binding?.btnDonatello?.setOnClickListener {
-            showCharacter("donatello")
-        }
-
-        binding?.btnMike?.setOnClickListener {
-            showCharacter("michelangelo")
+        binding?.turtlesList?.setOnItemClickListener { adapterView, view, index, id ->
+            Log.d("LISTVIEW", "listview: $adapterView")
+            Log.d("LISTVIEW", "view: $view")
+            Log.d("LISTVIEW", "index: $index")
+            Log.d("LISTVIEW", "id: $id")
+            val tv = view as TextView
+            showCharacter(tv.text.toString().lowercase())
         }
     }
 

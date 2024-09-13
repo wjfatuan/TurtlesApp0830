@@ -11,44 +11,20 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ninja Turtles"
+        android:text="@string/app_name"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/btnRaphael"
+    <ListView
+        android:id="@+id/turtlesList"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:entries="@array/turtle_names"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:orientation="horizontal"
-        >
-        <RadioButton
-            android:id="@+id/btnDonatello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Donatello"
-            />
-
-        <RadioButton
-            android:id="@+id/btnRaphael"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Raphael"
-        />
-
-        <RadioButton
-            android:id="@+id/btnMike"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mike"
-        />
-    </RadioGroup>
-
-
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imgCharacter"
@@ -56,7 +32,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@id/turtlesList"
         android:layout_marginTop="10dp"
         android:src="@drawable/donatello"
          />
